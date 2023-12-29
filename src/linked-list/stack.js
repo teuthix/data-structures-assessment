@@ -9,13 +9,33 @@ class Stack {
     this.linkedList = new LinkedList();
   }
 
-  push(value) {}
+  push(value) {
+    // insert at head
+    this.linkedList.insertAtHead(value);
+    return this;
+  }
 
-  pop() {}
+  pop() {
+    // remove from head
+    return this.linkedList.remove(
+      (node) => node.value === this.linkedList.head.value
+    );
+  }
 
-  peek() {}
+  peek() {
+    // return head
+    if (this.linkedList.length > 0) {
+      return this.linkedList.head.value;
+    }
+  }
 
-  isEmpty() {}
+  isEmpty() {
+    if (this.linkedList.length === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 module.exports = Stack;
