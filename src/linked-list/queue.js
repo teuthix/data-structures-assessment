@@ -10,11 +10,7 @@ class Queue {
   }
 
   enqueue(value) {
-    if (this.linkedList.length === 0) {
-      this.linkedList.insertAtHead(value);
-    } else {
-      this.linkedList.insert(value);
-    }
+    this.linkedList.insert(value);
   }
 
   dequeue() {
